@@ -1,0 +1,114 @@
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) !important;
+  justify-items: center;
+  background: #f3f4f6;
+}
+.footerLink {
+  display: block;
+  text-decoration: none;
+  color: #374151;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.footerHeading2 {
+  color: #374151;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.logoImgBox {
+  height: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.logoImgBox img {
+  height: 100%;
+}
+
+.footerText {
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 32px;
+}
+.taxBox {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.taxImgBox {
+  height: 50px;
+}
+.taxImgBox img {
+  height: 100%;
+}
+.taxImgContent p {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  color: #374151;
+}
+.footerContacts {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 20px;
+  background: #f3f4f6;
+}
+.footerContacts a {
+  text-decoration: none;
+  color: #374151;
+}
+.footerContacts a span {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.footerContactIcon {
+  fill: #374151 !important;
+}
+.footerSocialMedia {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 15px;
+  background: #f3f4f6;
+  padding-bottom: 20px;
+}
+.footerSocialMediaIcon {
+  fill: #374151 !important;
+  font-size: 23px;
+}
+
+.LowerFooterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+.paymentMethods {
+  display: flex;
+  gap: 20px;
+}
+.paymmentsImgBox {
+  height: 30px;
+}
+.paymmentsImgBox img {
+  height: 100%;
+}
+.copyRights {
+  margin-block: 20px;
+}
+.copyRights p {
+  display: inline-block;
+  color: #9ca3af;
+  font-size: 12px;
+}
+.copyRights a {
+  text-decoration: none;
+  color: #9ca3af;
+  font-size: 12px;
+}

@@ -1,0 +1,49 @@
+.heroImg {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.heroImg img {
+  width: 100%;
+}
+
+.customerImg {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.customerImg img {
+  width: 100%;
+}
+.headingSecond {
+  padding-top: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.headingSecond:after {
+  content: "";
+  height: 10px;
+  width: 50px;
+  position: absolute;
+  color: green;
+  top: 50px;
+  left: 10px;
+}
+.container {
+  display: flex;
+  justify-content: center !important;
+}
+.perfumeImg {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.perfumeImg img {
+  width: 100%;
+}
+svg {
+  fill: #f3f4f6;
+}

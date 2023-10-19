@@ -1,0 +1,9 @@
+* {
+  text-align: right;
+}
+
+.container {
+  background: red;
+  width: 80%;
+  margin: 0 auto;
+}

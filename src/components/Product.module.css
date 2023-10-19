@@ -1,0 +1,36 @@
+.name {
+  color: #1f2937;
+  font-size: 14px !important;
+  font-weight: 700;
+  text-align: center;
+}
+.price {
+  color: #a0a0a0;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+.action {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.actionBtn {
+  background: transparent;
+  border: 1px solid #1f2937;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+.cardBody {
+  transition: all 0.3s;
+  transform: translateY(50%);
+}
+.cardBody:hover {
+  cursor: pointer;
+  transform: translateY(0);
+}
+.card {
+  overflow: hidden;
+  border: none !important;
+}
