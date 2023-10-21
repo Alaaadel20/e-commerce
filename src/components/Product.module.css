@@ -1,6 +1,6 @@
 .name {
   color: #1f2937;
-  font-size: 14px !important;
+  font-size: 12px !important;
   font-weight: 700;
   text-align: center;
 }
@@ -9,6 +9,7 @@
   font-size: 12px;
   font-weight: 700;
   text-align: center;
+  margin-bottom: 18px !important;
 }
 .action {
   display: flex;
@@ -21,16 +22,27 @@
   border-radius: 50%;
   height: 40px;
   width: 40px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.cardIcon {
+  background: transparent;
+  fill: #1f2937;
+  height: 20px;
+  width: 20px;
 }
 .cardBody {
   transition: all 0.3s;
-  transform: translateY(50%);
+  margin-top: 30px;
+  transform: translateY(10%);
 }
-.cardBody:hover {
+.card:hover .cardBody {
   cursor: pointer;
-  transform: translateY(0);
+  transform: translateY(-50%);
 }
 .card {
   overflow: hidden;
   border: none !important;
+  height: 282px !important;
 }

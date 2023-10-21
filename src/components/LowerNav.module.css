@@ -4,3 +4,8 @@
 .logo {
   height: 100%;
 }
+.cartIcon {
+  background: red;
+  height: 40px;
+  width: 40px;
+}

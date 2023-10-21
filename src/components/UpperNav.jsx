@@ -1,3 +1,4 @@
+import CurrencyConverter from "./CurrencyConverter";
 import styles from "./UpperNav.module.css";
 function UpperNav() {
   return (
@@ -6,6 +7,9 @@ function UpperNav() {
         <li>سياسة الاسترجاع و الاستبدال والإلغاء</li>
         <li>خطوات الشراء</li>
         <li>سياسة الخصوصية</li>
+        <li>
+          <CurrencyConverter />
+        </li>
       </ul>
     </div>
   );

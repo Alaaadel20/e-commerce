@@ -1,3 +1,21 @@
 body {
   font-family: "cairo" !important;
 }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "cairo" !important;
+  overflow-x: hidden;
+}

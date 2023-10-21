@@ -1,13 +1,10 @@
-import styles from "./Home.module.css";
-import Product from "../components/Product";
-
-const products = [
+const productsDb = [
   {
     productName: "عطر الهيل الملكي - عطر غزلان",
-    id: 1256787,
+    id: 1,
     img: "../../assets/imgs/otour/1.webp",
     category: "otour",
-    price: "١٧٥ ر.س",
+    price: 175,
     rating: null,
     available: true,
     bestseller: true,
@@ -17,10 +14,10 @@ const products = [
   },
   {
     productName: "عطر الهيل جولد + عطر أفوكادو",
-    id: 2256787,
+    id: 2,
     img: "../../assets/imgs/otour/2.webp",
     category: "otour",
-    price: "١٩٣ ر.س",
+    price: 193,
     rating: 5,
     available: true,
     bestseller: false,
@@ -30,10 +27,10 @@ const products = [
   },
   {
     productName: "عرض اليوم الوطني ( عطر الهيل + آوقيتين مروكي)",
-    id: 3256787,
+    id: 3,
     img: "../../assets/imgs/otour/3.webp",
     category: "otour",
-    price: "١٩٣ ر.س",
+    price: 193,
     rating: null,
     available: true,
     bestseller: false,
@@ -43,10 +40,10 @@ const products = [
   },
   {
     productName: "أوقيتين كلمنتان فاخر +عطر غزلان",
-    id: 4256787,
+    id: 4,
     img: "../../assets/imgs/otour/4.webp",
     category: "otour",
-    price: "١٨٩ ر.س",
+    price: 189,
     rating: 5,
     available: true,
     bestseller: false,
@@ -56,10 +53,10 @@ const products = [
   },
   {
     productName: "أوقيتين بخور مروكي + عطر غزلان",
-    id: 5256787,
+    id: 5,
     img: "../../assets/imgs/otour/5.webp",
     category: "otour",
-    price: "١٦٩ ر.س",
+    price: 169,
     rating: null,
     available: true,
     bestseller: false,
@@ -69,10 +66,10 @@ const products = [
   },
   {
     productName: "عطر كولينان - عطر غزلان",
-    id: 6256787,
+    id: 6,
     img: "../../assets/imgs/otour/6.webp",
     category: "otour",
-    price: "١٧٧ ر.س",
+    price: 177,
     rating: 5,
     available: true,
     bestseller: false,
@@ -82,10 +79,10 @@ const products = [
   },
   {
     productName: "عطر غزلان",
-    id: 7256787,
+    id: 7,
     img: "../../assets/imgs/otour/7.webp",
     category: "otour",
-    price: "١٣٩ ر.س",
+    price: 139,
     rating: 3,
     available: true,
     bestseller: true,
@@ -95,10 +92,10 @@ const products = [
   },
   {
     productName: "عطر عود توباكو + أوقية بخور مروكي",
-    id: 8256787,
+    id: 8,
     img: "../../assets/imgs/otour/8.webp",
     category: "otour",
-    price: "١٣٢ ر.س",
+    price: 132,
     rating: 5,
     available: true,
     bestseller: false,
@@ -108,10 +105,10 @@ const products = [
   },
   {
     productName: "عطر ذكرى + أوقية بخور مروكي ذكي",
-    id: 2956787,
+    id: 9,
     img: "../../assets/imgs/otour/9.webp",
     category: "otour",
-    price: "١١٩ ر.س",
+    price: 119,
     rating: 5,
     available: true,
     bestseller: false,
@@ -121,10 +118,10 @@ const products = [
   },
   {
     productName: "أوقية مروكي فاخر + عطر عتيق مجاني",
-    id: 1356787,
+    id: 10,
     img: "../../assets/imgs/otour/10.webp",
     category: "otour",
-    price: "١٣٠ ر.س",
+    price: 130,
     rating: null,
     available: true,
     bestseller: false,
@@ -134,10 +131,10 @@ const products = [
   },
   {
     productName: "عطر SEVEN - عطر EIGHT",
-    id: 1456787,
+    id: 11,
     img: "../../assets/imgs/otour/11.webp",
     category: "otour",
-    price: "١٨٨ ر.س",
+    price: 188,
     rating: null,
     available: true,
     bestseller: false,
@@ -147,10 +144,10 @@ const products = [
   },
   {
     productName: "عطر كولينان",
-    id: 1556787,
+    id: 12,
     img: "../../assets/imgs/otour/12.webp",
     category: "otour",
-    price: "٢٢٥ ر.س",
+    price: 225,
     rating: 5,
     available: true,
     bestseller: false,
@@ -160,10 +157,10 @@ const products = [
   },
   {
     productName: "عطر عتيق الإصدار الجديد",
-    id: 1656787,
+    id: 13,
     img: "../../assets/imgs/otour/13.webp",
     category: "otour",
-    price: "١٣٠ ر.س",
+    price: 130,
     rating: 5,
     available: true,
     bestseller: false,
@@ -173,10 +170,10 @@ const products = [
   },
   {
     productName: "عطر ذكرى 30 مل",
-    id: 1756787,
+    id: 14,
     img: "../../assets/imgs/otour/14.webp",
     category: "otour",
-    price: "١١٩ ر.س",
+    price: 119,
     rating: 5,
     available: true,
     bestseller: false,
@@ -186,11 +183,11 @@ const products = [
   },
   {
     productName: "عطر الهيل الملكي",
-    id: 1856787,
+    id: 15,
     img: "../../assets/imgs/otour/15.webp",
     category: "otour",
-    price: "٢٥٤ ر.س",
-    priceAfterSale: "٩٣ ر.س",
+    price: 93,
+    priceBeforeSale: "٢٥٤",
     rating: 5,
     available: true,
     bestseller: false,
@@ -200,10 +197,10 @@ const products = [
   },
   {
     productName: "مجموعة Special Q",
-    id: 1956787,
+    id: 16,
     img: "../../assets/imgs/otour/16.webp",
     category: "otour",
-    price: "١٨٩ ر.س",
+    price: 189,
     rating: 5,
     available: true,
     bestseller: false,
@@ -213,10 +210,10 @@ const products = [
   },
   {
     productName: "مجموعة الميركة",
-    id: 1266787,
+    id: 17,
     img: "../../assets/imgs/otour/17.webp",
     category: "otour",
-    price: "٩٩ ر.س",
+    price: 99,
     rating: 5,
     available: true,
     bestseller: false,
@@ -226,10 +223,10 @@ const products = [
   },
   {
     productName: "عود توباكو - كولينان - ذكرى",
-    id: 1276787,
+    id: 18,
     img: "../../assets/imgs/otour/18.webp",
     category: "otour",
-    price: "٢٩٩ ر.س",
+    price: 299,
     rating: 5,
     available: false,
     bestseller: true,
@@ -239,10 +236,10 @@ const products = [
   },
   {
     productName: "عرض العمودي الجديد",
-    id: 1276871,
+    id: 19,
     img: "../../assets/imgs/oud/1.webp",
     category: "adhan",
-    price: "١٧٩ ر.س",
+    price: 179,
     rating: 5,
     available: true,
     bestseller: true,
@@ -252,10 +249,10 @@ const products = [
   },
   {
     productName: "دهن الشيوخ 1 + 1 مجانًا",
-    id: 1276872,
+    id: 20,
     img: "../../assets/imgs/oud/2.webp",
     category: "adhan",
-    price: "١٨٨ ر.س",
+    price: 188,
     rating: null,
     available: true,
     bestseller: false,
@@ -265,10 +262,10 @@ const products = [
   },
   {
     productName: "دهن لاوسي معتق 25 سنة",
-    id: 1276873,
+    id: 21,
     img: "../../assets/imgs/oud/3.webp",
     category: "adhan",
-    price: "١٨٨ ر.س",
+    price: 293,
     rating: null,
     available: true,
     bestseller: false,
@@ -278,10 +275,10 @@ const products = [
   },
   {
     productName: "عرض الشيوخ - 4 أدهان (ربع)",
-    id: 1276874,
+    id: 22,
     img: "../../assets/imgs/oud/4.webp",
     category: "adhan",
-    price: "١٨٨ ر.س",
+    price: 293,
     rating: null,
     available: true,
     bestseller: false,
@@ -291,10 +288,10 @@ const products = [
   },
   {
     productName: "2 دهن عود كمبودي بالورد",
-    id: 1276875,
+    id: 23,
     img: "../../assets/imgs/oud/5.webp",
     category: "adhan",
-    price: "١٨٨ ر.س",
+    price: 99,
     rating: 5,
     available: true,
     bestseller: false,
@@ -304,10 +301,10 @@ const products = [
   },
   {
     productName: "عرض اليوم الوطني ( عطر الهيل + آوقيتين مروكي)",
-    id: 12768751,
+    id: 24,
     img: "../../assets/imgs/oudBo5our/1.webp",
     category: "oudBo5our",
-    price: "١٩٣ ر.س",
+    price: 193,
     rating: null,
     available: true,
     bestseller: false,
@@ -317,10 +314,10 @@ const products = [
   },
   {
     productName: "أوقيتين كلمنتان فاخر +عطر غزلان",
-    id: 12768752,
+    id: 25,
     img: "../../assets/imgs/oudBo5our/2.webp",
     category: "oudBo5our",
-    price: "١٨٩ ر.س",
+    price: 189,
     rating: 5,
     available: true,
     bestseller: false,
@@ -330,10 +327,10 @@ const products = [
   },
   {
     productName: "أوقيتين بخور مروكي + عطر غزلان",
-    id: 12768753,
+    id: 26,
     img: "../../assets/imgs/oudBo5our/3.webp",
     category: "oudBo5our",
-    price: "١٦٩ ر.س",
+    price: 169,
     rating: null,
     available: true,
     bestseller: false,
@@ -343,10 +340,10 @@ const products = [
   },
   {
     productName: "عرض العمودي الجديد",
-    id: 12768754,
+    id: 27,
     img: "../../assets/imgs/oudBo5our/4.webp",
     category: "oudBo5our",
-    price: "١٧٩ ر.س",
+    price: 179,
     rating: 5,
     available: true,
     bestseller: false,
@@ -356,10 +353,10 @@ const products = [
   },
   {
     productName: "عطر عود توباكو + أوقية بخور مروكي",
-    id: 12768755,
+    id: 28,
     img: "../../assets/imgs/oudBo5our/5.webp",
     category: "oudBo5our",
-    price: "١٣٢ ر.س",
+    price: 132,
     rating: 5,
     available: true,
     bestseller: false,
@@ -369,10 +366,10 @@ const products = [
   },
   {
     productName: "عطر ذكرى + أوقية بخور مروكي ذكي",
-    id: 12768756,
+    id: 29,
     img: "../../assets/imgs/oudBo5our/6.webp",
     category: "oudBo5our",
-    price: "١١٩ ر.س",
+    price: 119,
     rating: null,
     available: true,
     bestseller: false,
@@ -382,10 +379,10 @@ const products = [
   },
   {
     productName: "ثلاث أوقيات كلمنتان فاخر جدًا",
-    id: 12768757,
+    id: 30,
     img: "../../assets/imgs/oudBo5our/7.webp",
     category: "oudBo5our",
-    price: "٢٤٩ ر.س",
+    price: 249,
     rating: 5,
     available: true,
     bestseller: false,
@@ -395,10 +392,10 @@ const products = [
   },
   {
     productName: "أوقية مروكي فاخر + عطر عتيق مجاني",
-    id: 12768758,
+    id: 31,
     img: "../../assets/imgs/oudBo5our/8.webp",
     category: "oudBo5our",
-    price: "١٣٠ ر.س",
+    price: 130,
     rating: null,
     available: true,
     bestseller: false,
@@ -408,10 +405,10 @@ const products = [
   },
   {
     productName: "البخور الذكي مروكي فاخر 140 غرام",
-    id: 12768759,
+    id: 32,
     img: "../../assets/imgs/oudBo5our/9.webp",
     category: "oudBo5our",
-    price: "١٨٥ ر.س",
+    price: 185,
     rating: 5,
     available: true,
     bestseller: false,
@@ -421,10 +418,10 @@ const products = [
   },
   {
     productName: "البخور الذكي مروكي فاخر 50 + 30 غرام هدية",
-    id: 127687510,
+    id: 33,
     img: "../../assets/imgs/oudBo5our/10.webp",
     category: "oudBo5our",
-    price: "١١٩ ر.س",
+    price: 119,
     rating: 5,
     available: true,
     bestseller: false,
@@ -434,10 +431,10 @@ const products = [
   },
   {
     productName: "بخور العمودي الذكي",
-    id: 127687511,
+    id: 34,
     img: "../../assets/imgs/oudBo5our/11.webp",
     category: "mabsos",
-    price: "٩٩ ر.س",
+    price: 99,
     rating: 5,
     available: true,
     bestseller: false,
@@ -447,11 +444,11 @@ const products = [
   },
   {
     productName: "بخور كلمنتان فاخر 3 أوقيات",
-    id: 127687512,
+    id: 35,
     img: "../../assets/imgs/oudBo5our/12.webp",
     category: "oudBo5our",
-    price: "٣٩٢ ر.س",
-    priceAfterSale: "١٢٩ ر.س",
+    price: 129,
+    priceBeforeSale: 392,
     rating: 5,
     available: true,
     bestseller: false,
@@ -461,11 +458,11 @@ const products = [
   },
   {
     productName: "بخور هندي ملكي ثمن كيلو",
-    id: 127687513,
+    id: 36,
     img: "../../assets/imgs/oudBo5our/13.webp",
     category: "oudBo5our",
-    price: "٧٬٧٢٣٫٤٠ ر.س",
-    priceAfterSale: "٢٬٣٥٠ ر.س",
+    price: 2350,
+    priceBeforeSale: 7723.4,
     rating: 5,
     available: true,
     bestseller: false,
@@ -475,10 +472,10 @@ const products = [
   },
   {
     productName: "البخور الذكي مروكي طبيعي محسن ثمن كيلو",
-    id: 127687514,
+    id: 37,
     img: "../../assets/imgs/oudBo5our/14.webp",
     category: "oudBo5our",
-    price: "١٣٩ ر.س",
+    price: 139,
     rating: 5,
     available: true,
     bestseller: false,
@@ -487,47 +484,4 @@ const products = [
     offer: false,
   },
 ];
-
-function Home() {
-  return (
-    <div>
-      <div className={styles.heroImg}>
-        <img src="../../assets/imgs/1.webp" alt="" />
-      </div>
-      <div className={styles.customerImg}>
-        <a href="">
-          <img src="../../assets/imgs/2.webp" alt="" />
-        </a>
-      </div>
-      <h2 className={styles.headingSecond}>جديدنا والأكثر مبيعًا</h2>
-      <div className="row  ">
-        {products
-          .filter((item) => item.bestseller === true)
-          .map((item) => (
-            <Product
-              key={item.id}
-              name={item.productName}
-              img={item.img}
-              priceA={item.price}
-            />
-          ))}
-      </div>
-      <div className={styles.perfumeImg}>
-        <img src="../../assets/imgs/3.webp" alt="" />
-      </div>
-      <h2 className={styles.headingSecond}>صنع بحب..</h2>
-      <div className="row  ">
-        {products.map((item) => (
-          <Product
-            key={item.id}
-            name={item.productName}
-            img={item.img}
-            priceA={item.price}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-export default Home;
+export default productsDb;
