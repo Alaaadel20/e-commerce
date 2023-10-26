@@ -9,12 +9,19 @@ import { Link } from "react-router-dom";
 function Product(props) {
   const { addToCart } = useContext(ShopContext);
   return (
-    <div className="col-lg-3 col-md-4 col-sm-6 d-flex g-1 justify-content-center">
+    <div className="col-lg-3 col-md-4 col-sm-6 d-flex  justify-content-center">
       <Card className={styles.card} style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={props.img} />
+        <Link className={styles.customLink} to={`/product-view/${props.id}`}>
+          <div className={styles.cardImgBox}>
+            <img src={props.img} alt="" />
+          </div>
+        </Link>
         <Card.Body className={styles.cardBody}>
           <Card.Title className={styles.name}>{props.name}</Card.Title>
-          <p className={styles.price}>{props.price}</p>
+          <p className={styles.price}>
+            {props.price.toLocaleString("ar-EG")}
+            <span>ر.س</span>
+          </p>
           <div className={styles.action}>
             <button className={styles.actionBtn}>
               <AiOutlineHeart className={styles.cardIcon} />
@@ -32,6 +39,14 @@ function Product(props) {
             </button>
           </div>
         </Card.Body>
+        {props.new && <div className={styles.badge}>جديدنا</div>}
+        {props.bestseller && <div className={styles.badge}>الاكثر مبيعا</div>}
+        {props.backAgain && <div className={styles.badge}>عاد من جديد</div>}
+        {props.offer && <div className={styles.badge}>عرض لفترة محدودة</div>}
+        {!props.available && (
+          <div className={styles.badgeNotAvailable}>نفدت الكمية</div>
+        )}
+        {!props.available && <div className={styles.overlay}></div>}
       </Card>
     </div>
   );
@@ -40,6 +55,11 @@ Product.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  available: PropTypes.bool.isRequired,
+  bestseller: PropTypes.bool.isRequired,
+  new: PropTypes.bool.isRequired,
+  backAgain: PropTypes.bool.isRequired,
+  offer: PropTypes.bool.isRequired,
 };
 export default Product;

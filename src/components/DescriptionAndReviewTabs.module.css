@@ -1,0 +1,20 @@
+.tabContentContainer {
+  border-right: 3px solid #eee;
+}
+.navItem {
+  background: transparent;
+  width: 100% !important;
+  background: #263e0f;
+}
+.active {
+  background: red !important;
+}
+.navLink {
+  width: 100% !important;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+Nav {
+  width: 100% !important;
+}

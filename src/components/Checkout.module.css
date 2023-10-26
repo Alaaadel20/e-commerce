@@ -1,0 +1,77 @@
+.checkoutBox {
+  margin-top: 50px;
+  margin-left: 80px;
+}
+.summary {
+  font-size: 14px;
+  font-weight: 800;
+}
+.totalProducts {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  margin-top: 20px;
+}
+.total {
+  color: #9ca3af;
+  font-size: 14px;
+}
+.totalNumber {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+}
+.confirmOrder {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  color: #fff;
+  background: #263e0f;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+.codeInput {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.codeInput label {
+  display: block;
+}
+.codeInput input {
+  width: 100%;
+  height: 35px;
+  border: 1px solid #eee;
+  padding-inline: 10px;
+}
+
+.inputContainer {
+  position: relative;
+}
+.addCode {
+  position: absolute;
+  height: 35px;
+  left: 0;
+  width: 70px;
+  text-align: center;
+  color: #fff;
+  background: #263e0f;
+  font-size: 14px;
+  font-weight: 700;
+}
+.alert {
+  font-size: 20px;
+}

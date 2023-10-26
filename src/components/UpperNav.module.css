@@ -1,7 +1,13 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 ul {
   list-style: none;
   display: flex;
 
+  padding: 15px 30px;
   font-size: 14px;
 }
 
@@ -15,6 +21,36 @@ li:nth-child(2) {
   padding-inline: 20px;
   border-inline: 1px solid #000;
 }
+li:nth-child(3),
 li:last-child {
   padding-right: 20px;
+}
+.currencyBtn {
+  border: none;
+  background: #fff;
+  display: inline;
+}
+
+.coinsIcon,
+.downIcon {
+  fill: #000;
+}
+.currency {
+  padding: 5px;
+}
+.mailBox,
+.phoneBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+.mailIcon,
+.phoneIcon {
+  fill: #000;
+}
+.contact {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
 }

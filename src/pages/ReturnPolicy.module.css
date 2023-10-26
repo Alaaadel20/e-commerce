@@ -3,7 +3,21 @@
 }
 
 .container {
-  background: red;
   width: 80%;
   margin: 0 auto;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: disc;
+}
+.list li {
+  border: none;
+  padding: 0;
+}
+.important {
+  font-weight: 700;
+}
+.listTwo {
+  font-size: 14px;
 }

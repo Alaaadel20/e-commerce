@@ -1,11 +1,83 @@
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.navbarActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-inline: 20px;
+}
+
 .navbarBrand {
   height: 42px;
 }
 .logo {
   height: 100%;
 }
+.cartIcon,
+.searchIcon,
+.userIcon {
+  fill: #000;
+  height: 30px;
+  width: 30px;
+}
 .cartIcon {
+  position: relative;
+}
+.cartCount {
+  position: absolute;
   background: red;
-  height: 40px;
-  width: 40px;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+  display: felx;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  font-size: 14px;
+  padding-inline: 10px;
+}
+.navLinkDropdown {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  font-size: 14px;
+  padding-inline: 10px;
+  display: block;
+}
+.dropdown {
+  color: #000;
+  font-weight: 700;
+  font-size: 14px;
+  padding-inline: 10px 30px;
+  width: 120px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  margin: 0 auto;
+  background: rgba(156, 153, 153, 0.17);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.2px);
+  -webkit-backdrop-filter: blur(11.2px);
+  border: 1px solid rgba(156, 153, 153, 0.12);
 }

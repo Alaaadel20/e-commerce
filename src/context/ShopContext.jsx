@@ -1,17 +1,27 @@
 import { createContext, useState } from "react";
+import { useContext } from "react";
+import { ProductContext } from "../context/ProductContext";
 import PropTypes from "prop-types";
-import products from "../db/data";
+
 export const ShopContext = createContext(null);
 
-const getDefaultCart = () => {
-  let cart = {};
-  for (let i = 1; i < products.length + 1; i++) {
-    cart[i] = 0;
-  }
-  return cart;
-};
 function ShopContextProvider(props) {
+  const { products } = useContext(ProductContext);
+  const getDefaultCart = () => {
+    let cart = {};
+    for (let i = 1; i < products.length + 1; i++) {
+      cart[i] = 0;
+    }
+    return cart;
+  };
   const [cartItems, setCartItems] = useState(getDefaultCart());
+  const resetCart = () => {
+    let cart = {};
+    for (let i = 1; i < products.length + 1; i++) {
+      cart[i] = 0;
+    }
+    setCartItems(cart);
+  };
   const getTotalCartAmount = () => {
     let totalAmount = 0;
     for (const item in cartItems) {
@@ -39,6 +49,9 @@ function ShopContextProvider(props) {
   const updateCartItemCount = (newAmount, itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: newAmount }));
   };
+  const removeItemFromCartTotally = (itemId) => {
+    setCartItems((prev) => ({ ...prev, [itemId]: 0 }));
+  };
   const contextValue = {
     cartItems,
     addToCart,
@@ -46,6 +59,8 @@ function ShopContextProvider(props) {
     updateCartItemCount,
     getTotalCartAmount,
     getTotalCartCount,
+    removeItemFromCartTotally,
+    resetCart,
   };
   console.log(cartItems);
   return (

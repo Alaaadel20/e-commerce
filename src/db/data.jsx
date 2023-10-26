@@ -229,7 +229,7 @@ const productsDb = [
     price: 299,
     rating: 5,
     available: false,
-    bestseller: true,
+    bestseller: false,
     new: false,
     backAgain: false,
     offer: false,

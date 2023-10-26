@@ -1,0 +1,114 @@
+.loginContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999 !important;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999 !important;
+  font-size: 14px;
+
+  direction: ltr;
+}
+
+.loginBox {
+  background: #fff;
+  position: relative;
+  border-radius: 6px;
+  padding: 25px;
+  direction: ltr;
+
+  min-width: 400px;
+  width: 400px;
+}
+.imgBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1px solid #231f1e;
+  margin-block: 25px;
+}
+.phoneInput {
+  direction: ltr;
+}
+label {
+  margin-bottom: 7px;
+}
+.phoneInputInput {
+  text-align: left !important;
+}
+.customInput input {
+  text-align: left !important;
+  width: 100% !important;
+}
+.phoneInput::placeholder {
+  direction: ltr;
+  text-align: left;
+}
+.customDropdown {
+  display: felx;
+  flex-direction: column;
+}
+.userIcon {
+  fill: #231f1e;
+  font-size: 30px;
+}
+.login {
+  text-align: center;
+  font-weight: 700;
+  color: #000;
+}
+.loginBtn {
+  display: block;
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+  height: 35px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 700;
+  background: #263e0f;
+  margin-bottom: 25px;
+}
+.loginOptionsBtn {
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: center;
+  height: 35px;
+  border-radius: 6px;
+  color: #263e0f;
+  font-weight: 700;
+  background: transparent;
+  font-size: 14px;
+}
+.email {
+  width: 100%;
+  padding: 5px 20px;
+  border: 1px solid #9ca3af;
+  direction: ltr !important;
+  text-align: left !important;
+  height: 35px;
+  border-radius: 3px;
+}
+
+.closeIcon {
+  fill: red;
+  display: flex;
+  font-size: 18px;
+}

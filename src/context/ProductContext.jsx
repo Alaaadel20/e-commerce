@@ -4,14 +4,17 @@ import productsDb from "../db/data";
 export const ProductContext = createContext(null);
 
 function ProductContextProvider(props) {
-  const [products, setProducts] = useState([...productsDb]);
+  const clonedProducts = productsDb.map((product) => ({ ...product }));
+  const [products, setProducts] = useState(clonedProducts);
   const setProductPrice = (factor) => {
-    products.forEach((product, i) => {
+    const updatedProducts = products.map((product, i) => {
       const price = productsDb[i].price;
-
-      product.price = price * factor;
+      return {
+        ...product,
+        price: price * factor,
+      };
     });
-    setProducts(products);
+    setProducts(updatedProducts);
   };
   const contextValue = { products, setProductPrice };
   return (

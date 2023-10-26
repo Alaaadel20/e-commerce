@@ -1,0 +1,24 @@
+.customerReviewContainer {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(229, 231, 235);
+  position: relative;
+}
+.time {
+  position: absolute;
+  top: 0;
+  left: 40px;
+}
+.customerImgBox {
+  height: 50px;
+  border-radius: 50%;
+}
+.customerImgBox img {
+  height: 100%;
+  border-radius: 50%;
+}
+.customerReviewBox {
+  display: flex;
+  justify-content: space-between;
+}

@@ -6,15 +6,44 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import styles from "./LowerNav.module.css";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
-import { AiOutlineShoppingCart } from "react-icons/ai";
-import { useContext } from "react";
+import {
+  AiOutlineShoppingCart,
+  AiOutlineSearch,
+  AiOutlineUser,
+} from "react-icons/ai";
+import { useContext, useState, useEffect } from "react";
 import { ShopContext } from "../context/ShopContext";
+import Login from "./Login";
 
 function LowerNav() {
   const { getTotalCartCount } = useContext(ShopContext);
+  const [showSearchBar, setShowSearchBar] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const handleShowSearchBar = () => {
+    setShowSearchBar(!showSearchBar);
+  };
+  const handleShowLogin = () => {
+    setShowLogin(!showLogin);
+  };
+  console.log(showSearchBar);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <>
-      <SearchBar />
+    <div className={isSticky ? styles.sticky : styles.navbarContainer}>
       <div className="d-flex justify-content-start">
         {["lg"].map((expand) => (
           <Navbar key={expand} expand={expand} className=" mb-3">
@@ -42,17 +71,28 @@ function LowerNav() {
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                  <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Link to="/otour">عطورات</Link>
-                    <Link to="/adhan">ادهان عود</Link>
-                    <Link to="/maba5er">المباخر الذكية</Link>
+                  <Nav className="justify-content-end align-items-center flex-grow-1 pe-3">
+                    <Link to="/otour" className={styles.navLink}>
+                      عطورات
+                    </Link>
+                    <Link to="/adhan" className={styles.navLink}>
+                      ادهان عود
+                    </Link>
+                    <Link to="/maba5er" className={styles.navLink}>
+                      المباخر الذكية
+                    </Link>
 
                     <NavDropdown
+                      className={styles.dropdown}
                       title="عود بخور"
                       id={`offcanvasNavbarDropdown-expand-${expand}`}
                     >
-                      <Link to="mabsos">مبثوث</Link>
-                      <Link to="oudBo5our">عود بخور</Link>
+                      <Link className={styles.navLinkDropdown} to="mabsos">
+                        مبثوث
+                      </Link>
+                      <Link className={styles.navLinkDropdown} to="oudBo5our">
+                        عود بخور
+                      </Link>
                     </NavDropdown>
                   </Nav>
                 </Offcanvas.Body>
@@ -61,11 +101,34 @@ function LowerNav() {
           </Navbar>
         ))}
       </div>
-      <Link to="/cart">
-        <AiOutlineShoppingCart className={styles.cartIcon} />
-      </Link>
-      <div>{getTotalCartCount()}</div>
-    </>
+
+      <div className={styles.navbarActions}>
+        {showSearchBar && (
+          <SearchBar handleShowSearchBar={handleShowSearchBar} />
+        )}
+        <div>
+          <AiOutlineSearch
+            className={styles.searchIcon}
+            onClick={handleShowSearchBar}
+          />
+        </div>
+        <div>
+          <AiOutlineUser
+            className={styles.userIcon}
+            onClick={handleShowLogin}
+          />
+        </div>
+        <Link to="/cart">
+          <div>
+            <span className={styles.cartCount}>
+              {getTotalCartCount().toLocaleString("ar-EG")}
+            </span>
+            <AiOutlineShoppingCart className={styles.cartIcon} />
+          </div>
+        </Link>
+      </div>
+      {showLogin && <Login handleShowLogin={handleShowLogin} />}
+    </div>
   );
 }
 

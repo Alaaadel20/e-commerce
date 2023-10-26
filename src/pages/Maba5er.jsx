@@ -1,6 +1,9 @@
 import Product from "../components/Product";
-import products from "../db/data";
+import { useContext } from "react";
+import { ProductContext } from "../context/ProductContext";
+
 function Maba5er() {
+  const { products } = useContext(ProductContext);
   return (
     <div>
       <div className="row  ">
@@ -12,7 +15,12 @@ function Maba5er() {
               id={item.id}
               name={item.productName}
               img={item.img}
-              priceA={item.price}
+              price={item.price}
+              available={item.available}
+              bestseller={item.bestseller}
+              new={item.new}
+              backAgain={item.backAgain}
+              offer={item.offer}
             />
           ))}
       </div>
