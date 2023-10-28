@@ -13,14 +13,14 @@ function Cart() {
     <div>
       {totalCount ? (
         <div className="row">
-          <div className="col-9">
+          <div className="col-lg-9 col-md-12">
             {products.map((product) => {
               if (cartItems[product.id] !== 0) {
                 return <CartItem key={product.id} data={product} />;
               }
             })}
           </div>
-          <div className="col-3">
+          <div className="col-lg-3 col-md-12 checkout">
             <Checkout />
           </div>
         </div>

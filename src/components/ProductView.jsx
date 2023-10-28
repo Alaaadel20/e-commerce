@@ -11,6 +11,7 @@ import { ShopContext } from "../context/ShopContext";
 import styles from "./ProductView.module.css";
 import Slider from "./Slider";
 import { CurrencyContext } from "../context/CurrencyContext";
+import ProductDescription from "./ProductDescription";
 function ProductView() {
   const { id } = useParams();
   const { products } = useContext(ProductContext);
@@ -33,7 +34,7 @@ function ProductView() {
           </h3>
           <del className={styles.priceBeforeSale}>
             {products[id - 1].priceBeforeSale?.toLocaleString("ar-EG")}
-            <span>{arabicSign}</span>
+            <span>{products[id - 1].priceBeforeSale?.arabicSign}</span>
           </del>
 
           {products[id - 1].available ? (
@@ -51,6 +52,7 @@ function ProductView() {
               نفدت الكمية
             </p>
           )}
+          <ProductDescription />
           <div className={styles.countControlBox}>
             <div className={styles.amount}> الكمية</div>
             <div className={styles.countControl}>

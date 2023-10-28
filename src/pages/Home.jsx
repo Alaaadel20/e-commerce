@@ -17,7 +17,7 @@ function Home() {
         </a>
       </div>
       <h2 className={styles.headingSecond}>جديدنا والأكثر مبيعًا</h2>
-      <div className="row">
+      <div className="row  ">
         {products
           .filter((item) => item.bestseller === true || item.id === 18)
           .map((item) => (

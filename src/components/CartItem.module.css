@@ -62,3 +62,32 @@
   fill: red;
   font-size: 14px;
 }
+@media only screen and (max-width: 780px) {
+  .CartItem {
+    max-width: 100%;
+    flex-direction: column;
+
+    position: relative;
+  }
+  .closeIcon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .cartItemData {
+    align-items: center;
+  }
+  .countControl {
+    position: absolute;
+    right: 200px;
+    top: 80px;
+    margin-block: 30px;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .cartItemDataNamePrice .name {
+    font-size: 12px;
+
+    width: 80%;
+  }
+}

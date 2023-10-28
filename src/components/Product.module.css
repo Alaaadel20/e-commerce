@@ -59,6 +59,9 @@
   min-width: 280px !important;
   height: 380px !important;
   position: relative !important;
+
+  margin-bottom: 30px;
+  margin-inline: 30px !important;
 }
 
 .cardImgBox img {
@@ -92,4 +95,10 @@
   border: 1px solid red;
   font-weight: 700;
   z-index: 999;
+}
+@media only screen and (max-width: 580px) {
+  .card {
+    min-width: 200px !important;
+    height: 300px !important;
+  }
 }

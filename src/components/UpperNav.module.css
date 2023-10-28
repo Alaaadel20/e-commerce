@@ -58,6 +58,11 @@ li:last-child {
   text-decoration: none;
   color: #212529;
 }
+.mailBox a,
+.phoneBox a {
+  text-decoration: none;
+  color: #000;
+}
 
 @media only screen and (max-width: 990px) {
   .nav {

@@ -1,7 +1,8 @@
+import styles from "./ProductDescription.module.css";
 function ProductDescription() {
   return (
-    <div>
-      <p>مكونات العطور:</p>
+    <div className={styles.container}>
+      <p className={styles.details}> تفاصيل المنتج:</p>
       <div>
         <h4>عود توباكوا :</h4>
         <p>

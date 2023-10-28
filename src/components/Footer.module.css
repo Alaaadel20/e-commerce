@@ -113,9 +113,15 @@
   font-size: 12px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 990px) {
   .footerContent {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: 1fr !important;
+  }
+  .taxBox {
+    margin-bottom: 20px;
+  }
+  .logoImgBox {
+    margin-top: 20px;
   }
   .footerText {
     padding-inline: 20px;
@@ -126,15 +132,18 @@
   .footerLink {
     font-size: 12px;
   }
+  .copyRights p {
+    font-size: 8px;
+  }
+  .copyRights a {
+    font-size: 8px;
+  }
 }
-@media only screen and (max-width: 500px) {
-  .footerContent {
-    grid-template-columns: 1fr !important;
+@media only screen and (max-width: 470px) {
+  .copyRights p {
+    font-size: 6px;
   }
-  .taxBox {
-    margin-bottom: 20px;
-  }
-  .logoImgBox {
-    margin-top: 20px;
+  .copyRights a {
+    font-size: 6px;
   }
 }

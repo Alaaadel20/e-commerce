@@ -11,7 +11,7 @@ function Product(props) {
   const { addToCart } = useContext(ShopContext);
   const { arabicSign } = useContext(CurrencyContext);
   return (
-    <div className="col-lg-3 col-md-4 col-sm-6 d-flex  justify-content-center">
+    <div className="  col-lg-3 col-md-4 col-sm-6 col-6 d-flex  justify-content-center container">
       <Card className={styles.card} style={{ width: "18rem" }}>
         <Link className={styles.customLink} to={`/product-view/${props.id}`}>
           <div className={styles.cardImgBox}>

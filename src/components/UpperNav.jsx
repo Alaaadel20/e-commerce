@@ -47,11 +47,15 @@ function UpperNav() {
         </ul>
         <div className={styles.contact}>
           <div className={styles.phoneBox}>
-            <span>966550551524</span>
+            <a href="https://api.whatsapp.com/send?phone=966550551524">
+              966550551524
+            </a>
             <BsTelephone className={styles.phoneIcon} />
           </div>
           <div className={styles.mailBox}>
-            <span>info@oudamoudi.com</span>
+            <a href="mailto:example@example.com?subject=Hello&body=I%20wanted%20to%20reach%20out%20to%20you&X-MS-OL-EXTREF=https://outlook.live.com/">
+              info@oudamoudi.com
+            </a>
             <AiOutlineMail className={styles.mailIcon} />
           </div>
         </div>
