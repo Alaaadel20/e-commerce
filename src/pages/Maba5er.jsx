@@ -1,7 +1,7 @@
 import Product from "../components/Product";
 import { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
-
+import styles from "./Maba5er.module.css";
 function Maba5er() {
   const { products } = useContext(ProductContext);
   return (
@@ -23,6 +23,12 @@ function Maba5er() {
               offer={item.offer}
             />
           ))}
+      </div>
+      <div className={styles.container}>
+        <div className={styles.imgBox}>
+          <img src="../../assets/imgs/empty_product.svg" alt="" />
+        </div>
+        <p className={styles.text}>لا توجد منتجات </p>
       </div>
     </div>
   );

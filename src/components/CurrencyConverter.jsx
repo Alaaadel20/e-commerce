@@ -1,23 +1,27 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 import PropTypes from "prop-types";
 import styles from "./CurrencyConverter.module.css";
 import { AiOutlineClose } from "react-icons/ai";
+import { CurrencyContext } from "../context/CurrencyContext";
 
-const CURRENCIES = [
-  { name: "درهم اماراتي", value: "uae", factor: 2, sign: "AED" },
-  { name: "دينار بحريني", value: "bahrain", factor: 4, sign: "BHD" },
-  { name: "ريال عماني", value: "oman", factor: 1, sign: "OMR" },
-  { name: "ريال سعودي", value: "ksa", factor: 3, sign: "SAR" },
-];
 function CurrencyConverter({ handleshowCurrency }) {
-  const { products, setProductPrice } = useContext(ProductContext);
+  const { setProductPrice } = useContext(ProductContext);
 
-  const [currency, setCurrency] = useState("ksa");
-  console.log(products);
-  const handleCheckboxChange = (currency, factor) => {
-    setCurrency(currency);
+  const {
+    CURRENCIES,
+    currency,
+    handleCurrencySettings,
+    handleNameSettings,
+    handleSign,
+  } = useContext(CurrencyContext);
+
+  const handleCheckboxChange = (currencyChosen, factor, currencyName, sign) => {
+    handleCurrencySettings(currencyChosen);
     setProductPrice(factor);
+    handleNameSettings(currencyName);
+    handleSign(sign);
+    console.log(sign);
   };
 
   return (
@@ -42,7 +46,9 @@ function CurrencyConverter({ handleshowCurrency }) {
                   onChange={() =>
                     handleCheckboxChange(
                       currencyItem.value,
-                      currencyItem.factor
+                      currencyItem.factor,
+                      currencyItem.name,
+                      currencyItem.signArabic
                     )
                   }
                 />
@@ -72,6 +78,7 @@ function CurrencyConverter({ handleshowCurrency }) {
 CurrencyConverter.propTypes = {
   handleshowCurrency: PropTypes.object.isRequired,
   handleSelectCurrency: PropTypes.object.isRequired,
+  onData: PropTypes.object.isRequired,
 };
 
 export default CurrencyConverter;

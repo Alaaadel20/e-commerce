@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
 }
-ul {
+.nav {
   list-style: none;
   display: flex;
 
@@ -53,4 +53,33 @@ li:last-child {
   display: flex;
   gap: 10px;
   margin-left: 20px;
+}
+.customLink {
+  text-decoration: none;
+  color: #212529;
+}
+
+@media only screen and (max-width: 990px) {
+  .nav {
+    font-size: 10px;
+  }
+  .mailBox,
+  .phoneBox {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .nav {
+    display: none;
+  }
+  .mailBox,
+  .phoneBox {
+    font-size: 10px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
 }

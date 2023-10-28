@@ -62,7 +62,7 @@ function ShopContextProvider(props) {
     removeItemFromCartTotally,
     resetCart,
   };
-  console.log(cartItems);
+
   return (
     <ShopContext.Provider value={contextValue}>
       {props.children}

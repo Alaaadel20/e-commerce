@@ -1,7 +1,12 @@
 .container {
-  /* display: flex; */
+  display: flex;
   gap: 50px;
   justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.1);
 }
 .imgBox {
   margin: 30px;
@@ -12,9 +17,6 @@
   width: 100%;
 }
 .contentBox {
-  display: inline-block;
-  margin-top: 150px;
-  width: 50%;
 }
 .name {
   color: #1f2937;
@@ -72,11 +74,13 @@
   height: 40px;
   display: felx;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-size: 700;
   background: #263e0f;
   color: #fff;
   transition: all 0.3s;
+  padding-inline: 20px;
+  width: 200px;
 }
 .addToCartBtn:hover {
   background: #000;
@@ -87,12 +91,13 @@
   height: 40px;
   display: felx;
   text-align: center;
-  font-size: 16px;
-  font-size: 700;
+  font-size: 14px;
+  font-weight: 700;
   border: 1px solid #263e0f;
   background: #fff;
   color: #263e0f;
   transition: all 0.3s;
+  width: 200px;
 }
 .buyNowBtn:hover {
   color: #fff;
@@ -125,4 +130,25 @@
 }
 .soldout {
   color: red;
+}
+
+@media only screen and (max-width: 1040px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .contentBox {
+    margin-bottom: 100px;
+  }
+  .addToCartBtn {
+    width: 50%;
+    font-size: 10px;
+  }
+  .buyNowBtn {
+    width: 50%;
+    font-size: 10px;
+  }
+  .contentBox {
+    width: 90%;
+  }
 }

@@ -10,12 +10,14 @@ import DescriptionAndPrefiewTabs from "./DescriptionAndReviewTabs";
 import { ShopContext } from "../context/ShopContext";
 import styles from "./ProductView.module.css";
 import Slider from "./Slider";
+import { CurrencyContext } from "../context/CurrencyContext";
 function ProductView() {
   const { id } = useParams();
   const { products } = useContext(ProductContext);
   const { cartItems, addToCart, removeFromCart, updateCartItemCount } =
     useContext(ShopContext);
   console.log(id);
+  const { arabicSign } = useContext(CurrencyContext);
   return (
     <>
       <div className={styles.container}>
@@ -25,9 +27,13 @@ function ProductView() {
         <div className={styles.contentBox}>
           <span>السعر شامل الضريبة</span>
           <h2 className={styles.name}> {products[id - 1].productName}</h2>
-          <h3 className={styles.price}>{products[id - 1].price}</h3>
+          <h3 className={styles.price}>
+            {products[id - 1].price.toLocaleString("ar-EG")}
+            <span>{arabicSign}</span>
+          </h3>
           <del className={styles.priceBeforeSale}>
-            {products[id - 1].priceBeforeSale}
+            {products[id - 1].priceBeforeSale?.toLocaleString("ar-EG")}
+            <span>{arabicSign}</span>
           </del>
 
           {products[id - 1].available ? (

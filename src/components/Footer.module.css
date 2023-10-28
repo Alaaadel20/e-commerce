@@ -112,3 +112,29 @@
   color: #9ca3af;
   font-size: 12px;
 }
+
+@media only screen and (max-width: 700px) {
+  .footerContent {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .footerText {
+    padding-inline: 20px;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .footerText,
+  .footerLink {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .footerContent {
+    grid-template-columns: 1fr !important;
+  }
+  .taxBox {
+    margin-bottom: 20px;
+  }
+  .logoImgBox {
+    margin-top: 20px;
+  }
+}

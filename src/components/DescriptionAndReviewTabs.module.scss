@@ -1,0 +1,22 @@
+$primary: red;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.tabContentContainer {
+  border-right: 3px solid #eee;
+}
+
+.navItem a {
+  color: #263e0f;
+}
+.navLink {
+  width: 100% !important;
+  text-align: center;
+  font-size: 14px;
+  color: #263e0f !important;
+}
+
+.container {
+  margin-top: 100px;
+  width: 80%;
+}

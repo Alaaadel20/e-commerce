@@ -26,7 +26,7 @@ function Slider() {
     },
   };
   return (
-    <div>
+    <div className={styles.container}>
       <h2 className={styles.heading}>منتجات قد تعجبك </h2>
       <Carousel
         autoPlay={true}
@@ -34,7 +34,6 @@ function Slider() {
         responsive={responsive}
         itemClass="carousel-item-padding-10-px"
         containerClass="carousel-container"
-        className={styles.mmm}
       >
         {products.map((item) => (
           <Product

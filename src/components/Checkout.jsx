@@ -1,9 +1,9 @@
 import styles from "./Checkout.module.css";
 import { useContext } from "react";
 import { ShopContext } from "../context/ShopContext";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import "react-toastify/dist/ReactToastify.css";
+
 function Checkout() {
   const { getTotalCartAmount, getTotalCartCount, resetCart } =
     useContext(ShopContext);
@@ -55,7 +55,6 @@ function Checkout() {
       <button className={styles.confirmOrder} onClick={handleOrder}>
         اتمام الطلب
       </button>
-      <ToastContainer className={styles.alert} />
     </div>
   );
 }

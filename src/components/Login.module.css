@@ -26,8 +26,7 @@
   padding: 25px;
   direction: ltr;
 
-  min-width: 400px;
-  width: 400px;
+  min-width: 300px;
 }
 .imgBox {
   display: flex;

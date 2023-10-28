@@ -14,6 +14,7 @@ import Cart from "./pages/cart";
 import ShopContextProvider from "./context/ShopContext";
 import ProductContextProvider from "./context/ProductContext";
 import ProductView from "./components/ProductView";
+import CurrencyContextProvider from "./context/CurrencyContext";
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -67,7 +68,9 @@ function App() {
   return (
     <ProductContextProvider>
       <ShopContextProvider>
-        <RouterProvider router={router} />
+        <CurrencyContextProvider>
+          <RouterProvider router={router} />
+        </CurrencyContextProvider>
       </ShopContextProvider>
     </ProductContextProvider>
   );

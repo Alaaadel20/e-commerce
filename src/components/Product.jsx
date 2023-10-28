@@ -5,9 +5,11 @@ import { AiOutlineHeart, AiOutlineEye } from "react-icons/ai";
 import { BsBag } from "react-icons/bs";
 import { ShopContext } from "../context/ShopContext";
 import { useContext } from "react";
+import { CurrencyContext } from "../context/CurrencyContext";
 import { Link } from "react-router-dom";
 function Product(props) {
   const { addToCart } = useContext(ShopContext);
+  const { arabicSign } = useContext(CurrencyContext);
   return (
     <div className="col-lg-3 col-md-4 col-sm-6 d-flex  justify-content-center">
       <Card className={styles.card} style={{ width: "18rem" }}>
@@ -20,7 +22,7 @@ function Product(props) {
           <Card.Title className={styles.name}>{props.name}</Card.Title>
           <p className={styles.price}>
             {props.price.toLocaleString("ar-EG")}
-            <span>ر.س</span>
+            <span>{arabicSign}</span>
           </p>
           <div className={styles.action}>
             <button className={styles.actionBtn}>
